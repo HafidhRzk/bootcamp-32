@@ -4,20 +4,28 @@ function addBlog() {
 
     let title = document.getElementById('input-blog-title').value;
     let content = document.getElementById('input-blog-content').value;
-    let image = document.getElementById('input-blog-image').files[0];
-    let startDate = document.getElementById('start-date').value
-    let endDate = document.getElementById('end-date').value
+    let image = document.getElementById('input-blog-image').files[0]
+    let techno = document.getElementsByName('techno');
+    let x=0;
+    let tech= Array();
 
-    let duration = endDate - startDate
-  
+    let printTech='';
+
+    for(let centang of techno){
+      if(centang.checked == true){
+        tech[x]=centang.value; x++
+        printTech += '<i class="'+centang.value+'"></i>';
+      }
+    }
+
     image = URL.createObjectURL(image)
 
     let blog = {
         title: title,
         content: content,
         image: image,
-        duration: duration,
-        postedAt: new Date()
+        tech: printTech,
+        postedAt: new Date(),
     }
 
     blogs.push(blog)
@@ -169,14 +177,12 @@ function renderBlog() {
                 href="blog-detail.html" target="_blank">${blogs[i].title}</a>
               </h3>
               <p style="color: grey">Post Date : ${getFullTime(blogs[i].postedAt)}</p>
-              <p style="color: grey">Durasi : ${blogs[i].duration} Day</p>
+              <p style="color: grey">Durasi : ${getDurationTime(blogs[i].duration)}</p>
               <div style="text-align: right; color: grey;">${getDistanceTime(blogs[i].postedAt)}</div>
               <p>${blogs[i].content}</p>
           </div>
           <div class="item-logo">
-          <i class="fa-brands fa-google-play"></i>
-          <i class="fa-brands fa-android"></i>
-          <i class="fa-brands fa-java"></i>
+          ${blogs[i].tech}
           </div>
           <div class="item-button">
               <a href="#" class="btn-edit">Edit</a>
@@ -241,6 +247,35 @@ function getDistanceTime(time) {
       }
     }
   }
+}
+
+function getDurationTime() {
+
+  let startDate = document.getElementById('start-date').value;
+  let endDate = document.getElementById('end-date').value;
+
+  let timeStart = new Date(startDate);
+  let timeEnd = new Date(endDate);
+
+  let duration = timeEnd - timeStart
+  
+  let yearDuration = Math.floor(duration / (12 * 30 * 24 * 60 * 60 * 1000))
+
+    if(yearDuration != 0){
+      return yearDuration + ' Year'
+    }else {
+      let monthDuration = Math.floor(duration / (30 * 24 * 60 * 60 * 1000))
+      
+      if(monthDuration != 0) {
+        return monthDuration + ' Months'
+      }else {
+        let dayDuration = Math.floor(duration / (24 * 60 * 60 * 1000))
+
+        if(dayDuration != 0){
+          return dayDuration + ' Days'
+        }
+      }
+    }
 }
 
 setInterval(function(){
