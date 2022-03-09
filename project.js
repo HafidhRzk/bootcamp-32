@@ -46,7 +46,7 @@ function renderBlog() {
       <div class="item-content">
           <h3>
             <a style="text-decoration:none; color:black" 
-            href="blog-detail.html" target="_blank">Dumbways Mobile App 2021</a>
+            href="project-detail.html" target="_blank">Dumbways Mobile App 2021</a>
           </h3>
           <p style="color: grey">Post Date : 12 January 2022 14:30 WIB</p>
           <p style="color: grey">Durasi : 3 Month</p>
@@ -71,7 +71,7 @@ function renderBlog() {
       <div class="item-content">
           <h3>
             <a style="text-decoration:none; color:black" 
-            href="blog-detail.html" target="_blank">Dumbways Mobile App 2021</a>
+            href="project-detail.html" target="_blank">Dumbways Mobile App 2021</a>
           </h3>
           <p style="color: grey">Post Date : 12 January 2022 14:30 WIB</p>
           <p style="color: grey">Durasi : 3 Month</p>
@@ -96,7 +96,7 @@ function renderBlog() {
       <div class="item-content">
           <h3>
             <a style="text-decoration:none; color:black" 
-            href="blog-detail.html" target="_blank">Dumbways Mobile App 2021</a>
+            href="project-detail.html" target="_blank">Dumbways Mobile App 2021</a>
           </h3>
           <p style="color: grey">Post Date : 12 January 2022 14:30 WIB</p>
           <p style="color: grey">Durasi : 3 Month</p>
@@ -121,7 +121,7 @@ function renderBlog() {
       <div class="item-content">
           <h3>
             <a style="text-decoration:none; color:black" 
-            href="blog-detail.html" target="_blank">Dumbways Mobile App 2021</a>
+            href="project-detail.html" target="_blank">Dumbways Mobile App 2021</a>
           </h3>
           <p style="color: grey">Post Date : 12 January 2022 14:30 WIB</p>
           <p style="color: grey">Durasi : 3 Month</p>
@@ -146,7 +146,7 @@ function renderBlog() {
       <div class="item-content">
           <h3>
             <a style="text-decoration:none; color:black" 
-            href="blog-detail.html" target="_blank">Dumbways Mobile App 2021</a>
+            href="project-detail.html" target="_blank">Dumbways Mobile App 2021</a>
           </h3>
           <p style="color: grey">Post Date : 12 January 2022 14:30 WIB</p>
           <p style="color: grey">Durasi : 3 Month</p>
@@ -174,7 +174,7 @@ function renderBlog() {
           <div class="item-content">
               <h3>
                 <a style="text-decoration:none; color:black" 
-                href="blog-detail.html" target="_blank">${blogs[i].title}</a>
+                href="project-detail.html" target="_blank">${blogs[i].title}</a>
               </h3>
               <p style="color: grey">Post Date : ${getFullTime(blogs[i].postedAt)}</p>
               <p style="color: grey">Durasi : ${getDurationTime(blogs[i].duration)}</p>
