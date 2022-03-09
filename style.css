@@ -113,7 +113,6 @@ nav .right-side a {
     box-shadow: 1px 3px rgb(184, 181, 181);
 }
 
-/* BLOG STYLE */
 .blog-form {
 padding: 50px 0;
 display: flex;
@@ -264,8 +263,6 @@ margin-top: 50px;
 cursor: pointer;
 }
 
-/* Blog list */
-
 .blog {
 text-align: center;
 font-family: futura bk bt;
@@ -342,14 +339,12 @@ text-decoration: none;
 color: rgb(255, 255, 255);
 }
 
-
 .blog .blog-list .detail-blog-content {
 font-weight: 300;
 font-size: 12px;
 line-height: 20px;
 }
 
-/* Blog Detail */
 .blog-detail {
 display: flex;
 justify-content: center;
